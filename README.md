@@ -1,4 +1,4 @@
-# 📊 Patanjali Sales Analysis Dashboard
+# 📊 Padanjali Sales Analysis Dashboard
 
 ## 📌 Project Overview
 

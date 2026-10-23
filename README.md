@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project presents a sales analysis dashboard developed using **Microsoft Power BI** to analyse Patanjali sales data. The dashboard provides business insights by visualising revenue performance, order trends, product performance, payment methods, and country-wise revenue distribution.
+This project presents a sales analysis dashboard developed using **Microsoft Power BI** to analyse Padanjali sales data. The dashboard provides business insights by visualising revenue performance, order trends, product performance, payment methods, and country-wise revenue distribution.
 
 The objective of this project is to transform sales data into meaningful visualisations that help identify sales patterns and support data-driven decision-making.
 
@@ -46,11 +46,11 @@ The dashboard includes the following KPI cards and visualisations:
 
 ### Visualisations
 
-* Monthly Revenue and Total Orders
+* Total Revenue and Total Orders
 * Average Order Value by Year
-* Revenue by Payment Method
+* Total Revenue by Payment Method
 * Top Products by Revenue
-* Revenue by Country
+* Revenue by Billing Country
 
 ---
 

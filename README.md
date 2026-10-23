@@ -75,28 +75,6 @@ This dashboard helps to:
 * Compare sales performance across countries.
 * Support sales planning and business decision-making.
 
----
-
-## 📷 Dashboard Preview
-
-<img width="1143" height="802" alt="patanjali_sales_dashboard png" src="https://github.com/user-attachments/assets/7adf76e1-2817-4ff9-95f6-2b9e8e16c6f6" />
-
-
----
-
-## 📁 Repository Contents
-
-```text
-Patanjali-Sales-Analysis/
-│
-├── README.md
-│
-├── Dashboard/
-│   └── patanjali_sales_dashboard.png
-│
-└── Documentation/
-    └── Patanjali_Sales_Analysis.docx
-```
 
 ---
 

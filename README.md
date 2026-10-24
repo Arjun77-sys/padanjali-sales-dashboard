@@ -1,10 +1,12 @@
-# 📊 Padanjali Sales Analysis Dashboard
+# 📊 Padanjali Analysis Dashboard
 
 ## 📌 Project Overview
 
-This project presents a sales analysis dashboard developed using **Microsoft Power BI** to analyse Padanjali sales data. The dashboard provides business insights by visualising revenue performance, order trends, product performance, payment methods, and country-wise revenue distribution.
+This project presents two sales dashboards built with **Microsoft Power BI** to analyse Padanjali sales data. The first covers overall sales performance: revenue, orders, products and payment methods. The second looks at sales by location, comparing countries, states and cities to find high- and low-performing regions.
 
-The objective of this project is to transform sales data into meaningful visualisations that help identify sales patterns and support data-driven decision-making.
+The aim is to turn sales data into clear visuals that show sales patterns and support data-driven decisions.
+
+> The dataset is confidential and is not included in this repository.
 
 ---
 
@@ -15,7 +17,7 @@ The objective of this project is to transform sales data into meaningful visuali
 * Analyse average order value across years.
 * Identify top-performing products.
 * Compare revenue across payment methods.
-* Analyse country-wise revenue distribution.
+* Analyse sales by country, state and city to identify high- and low-performing locations.
 * Present key performance indicators (KPIs) using Power BI.
 
 ---
@@ -31,9 +33,15 @@ The objective of this project is to transform sales data into meaningful visuali
 
 ---
 
-## 📊 Dashboard Features
+## 🧹 Data Preparation
 
-The dashboard includes the following KPI cards and visualisations:
+Before building the dashboards, the dataset (690 orders) was cleaned:
+
+* Converted order values to INR so revenue is comparable across countries.
+* Checked for and removed duplicates.
+* Standardised text fields.
+
+---
 
 ### Key Performance Indicators (KPIs)
 
@@ -54,32 +62,70 @@ The dashboard includes the following KPI cards and visualisations:
 
 ---
 
+### Key Performance Indicators (KPIs)
+
+* Total Countries (24)
+* Total Revenue (2.52M)
+* Total Cities (352)
+* Total Shipping States (73)
+* Total Orders (690)
+
+### Visualisations
+
+| Visual | Field | Purpose |
+|---|---|---|
+| Bar chart | Compare countries |
+| Filled map | | See the geographic spread |
+| Area chart | Compare order volume across states |
+| Column chart | Compare state revenue |
+
+---
+
 ## 💡 Key Insights
+
+### Sales Overview
 
 * Monthly revenue fluctuates throughout the year, with noticeable peaks in May and October.
 * Average order value shows a decline in 2026 compared with previous years.
 * Razorpay accounts for approximately 99.48% of recorded revenue.
 * Agnijith 90 gms is the leading revenue-generating product in the dashboard.
-* India is the largest revenue-generating market, followed by the United States and Singapore.
+
+### Geographical Analysis
+
+* India dominates revenue. It brings in over half of the ₹2.52M, with the US, Singapore and the UK far behind.
+* Kerala leads on both measures: about 235 orders (roughly a third of all 690) and about ₹0.36M in revenue, double any other state.
+* Tamil Nadu, Maharashtra, Telangana and Karnataka are almost level, each bringing in ₹0.15M to ₹0.17M.
+* Revenue drops sharply after the top five states. Gujarat and every state below it earn under ₹0.06M.
+* Overseas adds about 30%. The US, Singapore and the UK together contribute roughly ₹0.7M.
+* About 15 of the 24 countries contribute almost nothing, which points to occasional orders rather than established markets.
 
 ---
 
 ## 📈 Business Value
 
-This dashboard helps to:
+This project helps to:
 
 * Monitor overall sales performance.
 * Identify revenue-generating products.
 * Understand monthly sales fluctuations.
 * Analyse payment method distribution.
-* Compare sales performance across countries.
+* Compare sales performance across countries and states.
+* Spot high- and low-performing locations.
 * Support sales planning and business decision-making.
 
+---
+
+## ⚠️ Limitations
+
+* Geographical figures are read from the charts, so they are approximate.
+* The map uses billing country and the country bar chart uses shipping country, so the two can differ slightly.
+* The order-volume chart uses billing state and the revenue chart uses shipping state.
 
 ---
 
 ## 🚀 Future Improvements
 
+* Add average order value by location to see whether low-revenue states are low on volume, order size, or both.
 * Analyse profit and profit margins, if cost data is available.
 * Investigate monthly and yearly sales trends in greater detail.
 * Compare customer purchasing behaviour across markets.

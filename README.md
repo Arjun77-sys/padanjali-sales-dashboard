@@ -70,15 +70,6 @@ Before building the dashboards, the dataset (690 orders) was cleaned:
 * Total Shipping States (73)
 * Total Orders (690)
 
-### Visualisations
-
-| Visual | Field | Purpose |
-|---|---|---|
-| Bar chart | Compare countries |
-| Filled map | | See the geographic spread |
-| Area chart | Compare order volume across states |
-| Column chart | Compare state revenue |
-
 ---
 
 ## 💡 Key Insights

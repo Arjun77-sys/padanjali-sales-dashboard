@@ -80,6 +80,7 @@ Before building the dashboards, the dataset (690 orders) was cleaned:
 * Average order value shows a decline in 2026 compared with previous years.
 * Razorpay accounts for approximately 99.48% of recorded revenue.
 * Agnijith 90 gms is the leading revenue-generating product in the dashboard.
+* Billing and shipping city match in almost every order. 98.84% of orders are shipped to the same city as the billing address; so gifting to other cities is rare.
 
 ### Geographical Analysis
 

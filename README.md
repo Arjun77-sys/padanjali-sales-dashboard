@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project presents three dashboards built with **Microsoft Power BI** to analyse Padanjali sales data. The first covers overall sales performance: revenue, orders, products and payment methods. The second looks at sales by location, comparing countries, states and cities to find high- and low-performing regions. The third looks at product performance: revenue, quantity sold and revenue share by product, and how revenue has moved from year to year.
+This project presents four dashboards built with **Microsoft Power BI** to analyse Padanjali sales data. The first covers overall sales performance: revenue, orders, products and payment methods. The second looks at sales by location, comparing countries, states and cities to find high- and low-performing regions. The third looks at product performance: revenue, quantity sold and revenue share by product, and how revenue has moved from year to year. The fourth looks at customer behaviour: guest versus registered orders, repeat customers, order value and retention by first-order year.
 
 The aim is to turn sales data into clear visuals that show sales patterns and support data-driven decisions.
 
@@ -20,6 +20,9 @@ The aim is to turn sales data into clear visuals that show sales patterns and su
 * Analyse sales by country, state and city to identify high- and low-performing locations.
 * Compare products on revenue, quantity sold and revenue share to find top- and low-performing products.
 * Track product revenue across years and show how price and volume relate for each product.
+* Analyse customer purchase behaviour, order frequency and repeat customers.
+* Compare guest and registered orders, and the order value of repeat and one-time customers.
+* Track how many customers return, by the year of their first order, to find retention opportunities.
 * Present key performance indicators (KPIs) using Power BI.
 
 ---
@@ -48,6 +51,13 @@ For the product analysis, a few extra steps were needed:
 * Each order holds up to four product item slots, so the four item queries were appended into a single product table.
 * Empty item slots were removed, and product names were standardised so each product appears under one spelling.
 * Line totals were converted to INR using the exchange rate table. The final product table has 822 product lines.
+
+For the customer analysis:
+
+* A customer is defined by `customer_id`. Orders with a blank or 0 customer ID are guest orders, which cannot be tied to a person, so they were labelled separately and left out of customer figures.
+* A Customer Summary table was built with DAX, with one row per registered customer: total orders, total spend, first order date and last order date (323 customers).
+* Extra columns were added for customer type (repeat if 2 or more orders, otherwise one-time), average order value, orders band, first-order year and order type (guest or registered).
+* The customer count and order totals were checked against the dashboard cards (323 customers, 21 repeat customers, 350 registered orders).
 
 ---
 
@@ -96,6 +106,23 @@ For the product analysis, a few extra steps were needed:
 
 ---
 
+### Key Performance Indicators (KPIs)
+
+* Total Orders (690)
+* Registered Customers (323)
+* Repeated Registered Customers (21)
+* Guest Order % (49.28%)
+* Repeat Rate % (6.50%)
+
+### Visualisations
+
+* Customers by Orders Band
+* Customers by First-Order Year: Repeat vs One-time
+* Registered vs Guest Orders
+* Average Order Value by Customer Type
+
+---
+
 ## 💡 Key Insights
 
 ### Sales Overview
@@ -124,6 +151,15 @@ For the product analysis, a few extra steps were needed:
 * Kasmeerini 10ml, Kadambini 100ml and the Agnihari packs each earn ₹0.04M or less, so they add little to revenue.
 * Revenue rose from ₹0.30M in 2023 to ₹0.97M in 2025. 2026 shows ₹0.65M, but it is a partial year.
 
+### Customer Analysis
+
+* Half the orders can't be traced to a customer. 340 of the 690 orders (49.28%) are guest orders, so every customer figure describes the other half only.
+* Repeat buying is rare. 21 of 323 registered customers (6.50%) ordered more than once, and 302 ordered a single time.
+* Repeat customers mostly stop at two orders. 19 of the 21 placed exactly two, and only one customer placed four or more.
+* Average order value is similar for one-time and repeat customers (around ₹3.8K to ₹3.9K). With only 21 repeat customers, the difference is not conclusive.
+* The earliest customers came back most. 10.00% of customers whose first order was in 2023 ordered again, against 6.90% for 2024 and 7.06% for 2025. The 2026 rate (1.61%) is not comparable with the completed years, because 2026 is incomplete and those customers have had the least time to return.
+* 2024 brought the most new customers (116, about double 2023), but a smaller share of them returned than in 2023.
+
 ---
 
 ## 📈 Business Value
@@ -138,6 +174,8 @@ This project helps to:
 * Spot high- and low-performing locations.
 * See which products carry the business and which add little, so stock and promotion can follow demand.
 * Flag products where pricing may need a review, such as high volume with low revenue per unit.
+* Show how many customers come back, so follow-up offers can target the 302 one-time customers.
+* Show the gap in customer tracking (guest orders), which supports collecting customer details at checkout.
 * Support sales planning and business decision-making.
 
 ---
@@ -151,7 +189,10 @@ This project helps to:
 * Product percentages and per-unit values are worked out from rounded chart labels, so they are approximate.
 * Pack sizes are counted as separate products, which understates how much the Agnijith range matters as a whole.
 * Several products sold only 1 to 5 units, so a single order moves their revenue noticeably.
-* 2026 is a partial year, so its revenue is not directly comparable with earlier years.
+* 2026 is a partial year, so its revenue and repeat rate are not directly comparable with earlier years.
+* Customer figures cover registered customers only. A returning guest looks like a new guest, so the real repeat rate may be higher than 6.50%.
+* With only 21 repeat customers, comparisons that involve them, such as average order value, are indicative and not conclusive.
+* A customer who used more than one account would be counted as two customers.
 
 ---
 
@@ -164,6 +205,9 @@ This project helps to:
 * Add further product performance metrics.
 * Group pack sizes into product families (Agnijith, Agnihari, Kadambini, Kasmeerini) to show revenue share by product line.
 * Show which products sell in which countries and states, and which are often bought together.
+* Measure the average days between a customer's first and second order, to time follow-up offers.
+* Segment customers by total spend (for example the top 20%) to find the highest-value customers.
+* Compare which products repeat customers buy against one-time customers.
 * Improve sales forecasting using historical data.
 
 ---
